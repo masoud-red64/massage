@@ -1,0 +1,25 @@
+.service {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.service-title {
+  font-size: 25px;
+  font-weight: 600;
+  margin: 40px 0px;
+}
+.service-text {
+  font-size: 18px;
+  color: rgb(173, 170, 170);
+}
+
+@media screen and (max-width: 576px) {
+  .service img {
+    width: 70px;
+    height: 70px;
+  }
+}

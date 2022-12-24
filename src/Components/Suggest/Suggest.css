@@ -1,0 +1,74 @@
+.suggest {
+}
+
+.suggest h1 {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.suggest img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.suggest form {
+  width: 100%;
+  height: 100%;
+  padding: 40px;
+}
+
+.suggest form input {
+  padding: 5px;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #000;
+}
+
+.suggest .name-lastname {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.suggest .name-lastname input {
+  width: 48%;
+}
+
+.suggest .site-email {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.suggest .site-email input {
+  width: 48%;
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+  color: red;
+}
+
+.suggest textarea {
+  width: 100%;
+}
+
+.suggest .send {
+  width: 60px;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background: #000;
+  color: #fff;
+  transition: 0.4s;
+}
+
+.suggest .send:hover {
+  background-color: rgb(250, 63, 63);
+}
+
+.suggest .last-img {
+  height: 500px;
+}

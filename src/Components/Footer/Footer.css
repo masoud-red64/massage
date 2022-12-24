@@ -1,0 +1,59 @@
+.footer {
+  background-color: #f5ece3;
+  padding: 20px;
+}
+.footer .footer-title {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.footer .footer-text {
+  margin: 10px 0;
+}
+
+.sub-footer {
+  width: 80%;
+}
+.footer-about-us {
+  margin-top: 20px;
+}
+.footer-helpful-link {
+  margin-top: 20px;
+}
+
+.footer-helpful-link .link-list .link-item {
+  margin: 10px;
+}
+
+.footer-contact-us {
+  margin-top: 20px;
+}
+
+.footer-contact-us .email,
+.footer-contact-us .website {
+  display: flex;
+  align-items: center;
+}
+
+.email .email-icon,
+.website .web-icon {
+  margin-left: 3px;
+}
+
+.social-icons {
+  display: flex;
+}
+
+.social-icons li {
+  font-size: 30px;
+  margin: 5px 10px;
+}
+
+.social-icons li a {
+  color: gray;
+  transition: 0.3s;
+}
+
+.social-icons li a:hover {
+  color: #000;
+}

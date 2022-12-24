@@ -1,0 +1,15 @@
+@import url("./reset.css");
+@font-face {
+  font-family: Nazanin;
+  src: url(/public/fonts/BNazanin.ttf);
+}
+
+body {
+  direction: rtl;
+}
+
+*,
+html,
+body {
+  font-family: Nazanin;
+}

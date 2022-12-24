@@ -1,0 +1,47 @@
+.side-bar {
+  animation: showFadeSidebar 1s;
+  background: linear-gradient(to right, rgb(253, 89, 89), rgb(75, 75, 235));
+}
+
+@keyframes showFadeSidebar {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.sidebar-wrapper {
+  padding: 10px;
+}
+
+.side-bar .sidebar-wrapper .list .item {
+  border-bottom: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.side-bar .sidebar-wrapper .list .item:hover {
+  background-color: rgba(210, 204, 204, 0.515);
+}
+
+.side-bar .sidebar-wrapper .list .item .link {
+  display: block;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px;
+
+  color: rgb(255, 255, 255);
+}
+
+.side-bar .sidebar-wrapper .list .item.active {
+  background-color: rgb(63, 63, 63);
+}
+
+@media screen and (min-width: 1200px) {
+  .side-bar {
+    display: none;
+  }
+}
