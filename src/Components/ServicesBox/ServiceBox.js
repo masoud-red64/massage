@@ -3,7 +3,7 @@ import "./ServiceBox.css";
 import Jump from "react-reveal/Jump";
 export default function ServiceBox({ img, title, text }) {
   return (
-    <Jump dely={1000} duration={2000}>
+    <Jump delay={1000} duration={2000}>
       <div className="service-box">
         <div className="img-service-box">
           <img src={img} alt="" />
