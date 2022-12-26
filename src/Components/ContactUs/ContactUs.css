@@ -6,59 +6,56 @@
   justify-content: space-between;
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-  margin:0 auto;
+  margin: 0 auto;
   margin-top: 100px;
-
 }
 
-.contact-right{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction:column ;
+.contact-right {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.contact-right h1{
-    font-size: 40px;
-    margin-bottom: 10px;
-    
+.contact-right h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
 }
-.contact-right h2{
-font-size: 30px;
-margin-bottom: 10px;
+.contact-right h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
 }
-.contact-right h3{
-font-size: 25px;
-margin-bottom: 10px;
+.contact-right h3 {
+  font-size: 25px;
+  margin-bottom: 10px;
 }
-.contact-right h4{
-font-size: 20px;
-margin-bottom: 10px;
+.contact-right h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
 }
-.contact-right h5{
-font-size: 15px;
-margin-bottom: 20px;
-}
-
-.contact-right .social-media{
-    width: 100%;
+.contact-right h5 {
+  font-size: 15px;
+  margin-bottom: 20px;
 }
 
-.social-media ul{
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
+.contact-right .social-media {
+  width: 100%;
 }
 
-.social-media ul li{
-    font-size: 30px;
+.social-media ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.social-media ul li a{
-    color: gray;
+.social-media ul li {
+  font-size: 30px;
+}
 
+.social-media ul li a {
+  color: gray;
 }
 
 .contact-left {
@@ -70,4 +67,34 @@ margin-bottom: 20px;
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+@media screen and (max-width: 992px) {
+  .contact-us {
+    width: 400px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+      rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+
+  .contact-right {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .contact-left {
+    width: 100%;
+    height: 100%;
+  }
 }
