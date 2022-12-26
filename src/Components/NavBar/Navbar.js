@@ -3,7 +3,7 @@ import "./Navbar.css";
 import { BiMenu } from "react-icons/bi";
 import { IoMdClose } from "react-icons/io";
 import Sidebar from "../Sidebar/Sidebar";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export default function Navbar() {
   const [isShowSidebar, setIsShowSidebar] = useState(false);
@@ -22,43 +22,35 @@ export default function Navbar() {
               onClick={() => setIsShowSidebar(true)}
             />
           )}
-          <img loading="lazy" src="./images/brand.png" alt="" className="brand" />
+          <img
+            loading="lazy"
+            src="./images/brand.png"
+            alt=""
+            className="brand"
+          />
           <ul className="nav-list">
-            <li className="nav-item">
-              <Link to="/" className="nav-link active">
-                صفحه نخست
-              </Link>
-            </li>
-            <li className="nav-item">
-              <a href="#" className="nav-link">
-                خدمات ما
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#" className="nav-link">
-                آموزش
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#" className="nav-link">
-                اخبار
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#" className="nav-link">
-                گالری
-              </a>
-            </li>
-            <li className="nav-item">
-              <a href="#" className="nav-link">
-                درباره اپارس
-              </a>
-            </li>
-            <li className="nav-item">
-              <Link to="/contactus" className="nav-link">
-                تماس ما
-              </Link>
-            </li>
+            <NavLink to="/" className="nav-item nav-link">
+              صفحه نخست
+            </NavLink>
+
+            <NavLink to="/services" className="nav-item nav-link">
+              خدمات ما
+            </NavLink>
+            <NavLink to="/teach" className="nav-item nav-link">
+              آموزش
+            </NavLink>
+            <NavLink to="/news" className="nav-item nav-link">
+              اخبار
+            </NavLink>
+            <NavLink to="/gallery" className="nav-item nav-link">
+              گالری
+            </NavLink>
+            <NavLink to="/about" className="nav-item nav-link">
+              درباره اپارس
+            </NavLink>
+            <NavLink to="/contactus" className="nav-item nav-link">
+              تماس ما
+            </NavLink>
           </ul>
         </div>
         <p>
@@ -66,7 +58,7 @@ export default function Navbar() {
           <span> منسیکس </span>
         </p>
       </div>
-      {isShowSidebar && <Sidebar  setIsShowSidebar={setIsShowSidebar} />}
+      {isShowSidebar && <Sidebar setIsShowSidebar={setIsShowSidebar} />}
     </>
   );
 }

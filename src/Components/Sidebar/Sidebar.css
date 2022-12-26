@@ -18,6 +18,7 @@
 }
 
 .side-bar .sidebar-wrapper .list .item {
+  display: block;
   border-bottom: 1px solid #ccc;
   border-radius: 5px;
 }
@@ -26,12 +27,13 @@
   background-color: rgba(210, 204, 204, 0.515);
 }
 
-.side-bar .sidebar-wrapper .list .item .link {
+.side-bar .sidebar-wrapper .list .item,
+.item .link {
   display: block;
   text-decoration: none;
   font-size: 15px;
   font-weight: 600;
-  padding: 10px;
+  padding: 5px;
 
   color: rgb(255, 255, 255);
 }
