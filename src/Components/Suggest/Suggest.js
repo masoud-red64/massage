@@ -8,7 +8,7 @@ export default function Suggest() {
     <Container fluid className="suggest">
       <Row>
         <Col xxl={4} xl={4} md={6}>
-          <img src="./images/suggestright.jpg" alt="" />
+          <img loading="lazy" src="./images/suggestright.jpg" alt="" />
         </Col>
         <Col xxl={4} xl={4} md={6}>
           <Rotate bottom right delay={500}>

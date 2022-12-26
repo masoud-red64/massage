@@ -22,7 +22,7 @@ export default function Navbar() {
               onClick={() => setIsShowSidebar(true)}
             />
           )}
-          <img src="./images/brand.png" alt="" className="brand" />
+          <img loading="lazy" src="./images/brand.png" alt="" className="brand" />
           <ul className="nav-list">
             <li className="nav-item">
               <Link to="/" className="nav-link active">
