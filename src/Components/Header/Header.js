@@ -2,6 +2,7 @@ import "./Header.css";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
 import { Fade, Flip } from "react-reveal";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -18,13 +19,14 @@ export default function Header() {
         <div className="header-btn">
           <Flip right>
             <button className="header-service-btn">
-              خدمات ما
+              <Link to="/services"> خدمات ما</Link>
+
               <MdKeyboardArrowRight className="service-arrow-icon" />
             </button>
           </Flip>
           <Flip left>
-            <button className="header-about-btn">
-              درباره ما
+            <button className="header-contact-btn">
+              <Link to="/contactus">تماس با ما</Link>
               <MdKeyboardArrowRight className="about-arrow-icon" />
             </button>
           </Flip>

@@ -64,12 +64,12 @@
     grid-template-rows: repeat(2.1fr);
   }
   .services .services-title {
-    width: 80%;
+    width: 90%;
   }
 }
 @media screen and (max-width: 768px) {
   .service-component {
-    width: 50%;
+   padding: 0;
   }
   .services .services-title {
     width: 90%;
@@ -95,6 +95,7 @@
   .service-component {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3.1fr);
+    padding-right: 50px;
     margin: 0 auto;
   }
   .services .services-title {
@@ -126,9 +127,10 @@
 
 @media screen and (max-width: 500px) {
   .service-component {
+    width: 70%;
     padding: 0;
   }
-  .services-title {
+ .services .services-title {
     font-size: 20px;
   }
 }

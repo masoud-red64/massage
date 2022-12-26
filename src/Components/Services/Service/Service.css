@@ -22,4 +22,14 @@
     width: 70px;
     height: 70px;
   }
+
+  .service-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 40px 0px;
+  }
+  .service-text {
+    font-size: 15px;
+    color: rgb(173, 170, 170);
+  }
 }
