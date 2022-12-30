@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { supabase } from "../../supabaseClient";
 import "./Opinion.css";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Opinion(props) {
   const [isShowAnswerInput, setIsShowAnswerInput] = useState(false);
@@ -12,24 +14,40 @@ export default function Opinion(props) {
   const input = useRef();
   const answerBtn = useRef();
 
+  const sendAnswerNotify = () =>
+    toast.success("پاسخ ارسال شد", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    });
+
   const sendOpinion = async (id) => {
-    try {
-      const { data, error } = await supabase
-        .from("suggests")
+    console.log("opinion");
+    if (answer) {
+      try {
+        const { data, error } = await supabase
+          .from("suggests")
 
-        .update({ answer: answer })
-        .eq("id", id);
+          .update({ answer: answer })
+          .eq("id", id);
 
-      if (error) throw error;
-      if (data != null) {
-        console.log(data);
+        if (error) throw error;
+        if (data != null) {
+          console.log(data);
+        }
+      } catch (error) {
+        alert(error);
       }
-    } catch (error) {
-      alert(error);
-    }
 
-    setIsShowAnswerInput(false);
-    setDisableAnswer(true);
+      sendAnswerNotify();
+      setIsShowAnswerInput(false);
+      setDisableAnswer(true);
+    }
   };
 
   //   useEffect(() => {

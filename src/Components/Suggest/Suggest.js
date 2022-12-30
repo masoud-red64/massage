@@ -4,6 +4,8 @@ import "./Suggest.css";
 import { Rotate } from "react-reveal";
 import { supabase } from "../../supabaseClient";
 import Opinion from "../Opinion/Opinion";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export default function Suggest() {
   const [firstname, setFirstname] = useState("");
@@ -13,6 +15,19 @@ export default function Suggest() {
   const [suggests, setSuggests] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [paginatedSuggests, setPaginatedSuggests] = useState([]);
+  const [disabled, setDisabled] = useState(false)
+
+  const sendSuggestNotify = () =>
+    toast.success("نظر شما ارسال شد", {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: false,
+      progress: undefined,
+      theme: "dark",
+    });
 
   let pageSize = 3;
   let pagesNumbers;
@@ -73,7 +88,6 @@ export default function Suggest() {
   }
 
   async function createSuggest(event) {
-    event.preventDefault();
     let newSuggest = {
       firstname: firstname,
       lastname: lastname,
@@ -81,8 +95,16 @@ export default function Suggest() {
       opinion: opinion,
       date: time,
     };
-
+    
     if (firstname && lastname && email && opinion) {
+      sendSuggestNotify();
+      event.preventDefault();
+      setDisabled(true)
+      event.target.disabled = true;
+      setTimeout(() => {
+        event.target.disabled = false;
+        setDisabled(false)
+      }, 3000);
       try {
         const { data, error } = await supabase
           .from("suggests")
@@ -96,6 +118,10 @@ export default function Suggest() {
       } catch (error) {
         alert(error);
       }
+      setFirstname('')
+      setLastname('')
+      setEmail('')
+      setOpinion('')
     }
   }
 
@@ -148,8 +174,8 @@ export default function Suggest() {
                 value={opinion}
                 onChange={(e) => setOpinion(e.target.value)}
               ></textarea>
-              <button className="send" type="submit" onClick={createSuggest}>
-                ارسال
+              <button  className="send" type="submit" onClick={createSuggest}>
+                {disabled ? 'در حال ارسال...' : 'ارسال'}
               </button>
             </form>
             {useMemo(() => {
@@ -181,6 +207,7 @@ export default function Suggest() {
           <img src="./images/suggestleft.jpg" alt="" />
         </Col>
       </Row>
+      <ToastContainer />
     </Container>
   );
 }
