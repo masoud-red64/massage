@@ -69,7 +69,7 @@ export default function Opinion(props) {
                 ref={answerBtn}
                 className="btn-opinion"
                 onClick={showAnswerInput}
-                disabled={disableAnswer}
+                disabled={disableAnswer || suggest.answer}
               >
                 پاسخ
               </button>

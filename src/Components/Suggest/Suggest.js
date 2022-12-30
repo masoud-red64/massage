@@ -11,6 +11,25 @@ export default function Suggest() {
   const [email, setEmail] = useState("");
   const [opinion, setOpinion] = useState("");
   const [suggests, setSuggests] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [paginatedSuggests, setPaginatedSuggests] = useState([]);
+
+  let pageSize = 3;
+  let pagesNumbers;
+
+  const pagesCount = Math.ceil(suggests.length / pageSize);
+  pagesNumbers = Array.from(Array(pagesCount).keys());
+
+  useEffect(() => {
+    let endIndex = pageSize * currentPage;
+    let startIndex = endIndex - pageSize;
+    let allShownSuggests = suggests.slice(startIndex, endIndex);
+    setPaginatedSuggests(allShownSuggests);
+  }, [currentPage]);
+
+  const changePaginate = (newPage) => {
+    setCurrentPage(newPage);
+  };
 
   let currentdate = new Date();
   let date = new Date().toLocaleDateString("fa-IR");
@@ -40,6 +59,12 @@ export default function Suggest() {
 
       if (data != null) {
         setSuggests(data);
+        let endIndex = pageSize * currentPage;
+        let startIndex = endIndex - pageSize;
+        let allShownSuggest = data
+          .sort((a, b) => b.id - a.id)
+          .slice(startIndex, endIndex);
+        setPaginatedSuggests(allShownSuggest);
         console.log(data);
       }
     } catch (error) {
@@ -128,11 +153,29 @@ export default function Suggest() {
               </button>
             </form>
             {useMemo(() => {
-              return suggests
-                .reverse()
-                .map((suggest) => <Opinion suggest={suggest} />);
-            }, [suggests])}
+              return paginatedSuggests.map((suggest) => (
+                <Opinion suggest={suggest} />
+              ));
+            }, [paginatedSuggests])}
           </Rotate>
+          <nav className="d-flex justify-content-center">
+            <ul className="pagination">
+              {pagesNumbers.reverse().map((pageNumber) => (
+                <li
+                  key={pageNumber + 1}
+                  className={
+                    pageNumber + 1 === currentPage
+                      ? "page-item active"
+                      : "page-item"
+                  }
+                  onClick={() => changePaginate(pageNumber + 1)}
+                  style={{ cursor: "pointer" }}
+                >
+                  <span className="page-link">{pageNumber + 1}</span>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </Col>
         <Col xxl={4} xl={4} md={12} sm={12} className="last-img">
           <img src="./images/suggestleft.jpg" alt="" />
