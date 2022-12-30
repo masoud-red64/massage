@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "./Suggest.css";
 import { Rotate } from "react-reveal";
@@ -127,9 +127,11 @@ export default function Suggest() {
                 ارسال
               </button>
             </form>
-            {suggests.reverse().map((suggest) => (
-              <Opinion suggest={suggest} />
-            ))}
+            {useMemo(() => {
+              return suggests
+                .reverse()
+                .map((suggest) => <Opinion suggest={suggest} />);
+            }, [suggests])}
           </Rotate>
         </Col>
         <Col xxl={4} xl={4} md={12} sm={12} className="last-img">
