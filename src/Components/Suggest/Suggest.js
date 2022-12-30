@@ -15,7 +15,7 @@ export default function Suggest() {
   const [suggests, setSuggests] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [paginatedSuggests, setPaginatedSuggests] = useState([]);
-  const [disabled, setDisabled] = useState(false)
+  const [disabled, setDisabled] = useState(false);
 
   const sendSuggestNotify = () =>
     toast.success("نظر شما ارسال شد", {
@@ -73,10 +73,11 @@ export default function Suggest() {
       if (error) throw error;
 
       if (data != null) {
-        setSuggests(data);
+        let filterData = data.filter((suggest) => suggest.accept == true);
+        setSuggests(filterData);
         let endIndex = pageSize * currentPage;
         let startIndex = endIndex - pageSize;
-        let allShownSuggest = data
+        let allShownSuggest = filterData
           .sort((a, b) => b.id - a.id)
           .slice(startIndex, endIndex);
         setPaginatedSuggests(allShownSuggest);
@@ -95,15 +96,15 @@ export default function Suggest() {
       opinion: opinion,
       date: time,
     };
-    
+
     if (firstname && lastname && email && opinion) {
       sendSuggestNotify();
       event.preventDefault();
-      setDisabled(true)
+      setDisabled(true);
       event.target.disabled = true;
       setTimeout(() => {
         event.target.disabled = false;
-        setDisabled(false)
+        setDisabled(false);
       }, 3000);
       try {
         const { data, error } = await supabase
@@ -118,10 +119,10 @@ export default function Suggest() {
       } catch (error) {
         alert(error);
       }
-      setFirstname('')
-      setLastname('')
-      setEmail('')
-      setOpinion('')
+      setFirstname("");
+      setLastname("");
+      setEmail("");
+      setOpinion("");
     }
   }
 
@@ -174,8 +175,8 @@ export default function Suggest() {
                 value={opinion}
                 onChange={(e) => setOpinion(e.target.value)}
               ></textarea>
-              <button  className="send" type="submit" onClick={createSuggest}>
-                {disabled ? 'در حال ارسال...' : 'ارسال'}
+              <button className="send" type="submit" onClick={createSuggest}>
+                {disabled ? "در حال ارسال..." : "ارسال"}
               </button>
             </form>
             {useMemo(() => {
