@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useMemo, useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "./Suggest.css";
@@ -126,6 +127,14 @@ export default function Suggest() {
     }
   }
 
+=======
+import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
+import "./Suggest.css";
+import { Rotate } from "react-reveal";
+
+export default function Suggest() {
+>>>>>>> parent of 3051ce3 (add opinion section with logic and backend)
   return (
     <Container fluid className="suggest">
       <Row>
@@ -142,16 +151,12 @@ export default function Suggest() {
                   className="name"
                   placeholder="نام *"
                   required
-                  value={firstname}
-                  onChange={(e) => setFirstname(e.target.value)}
                 />
                 <input
                   type="text"
                   className="lastname"
                   placeholder="نام خانوادگی *"
                   required
-                  value={lastname}
-                  onChange={(e) => setLastname(e.target.value)}
                 />
               </div>
               <div className="site-email">
@@ -160,8 +165,6 @@ export default function Suggest() {
                   className="name"
                   placeholder="ایمیل *"
                   required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
                 />
                 <input type="text" className="lastname" placeholder="وب سایت" />
               </div>
@@ -172,9 +175,8 @@ export default function Suggest() {
                 rows="10"
                 placeholder="پیام *"
                 required
-                value={opinion}
-                onChange={(e) => setOpinion(e.target.value)}
               ></textarea>
+<<<<<<< HEAD
               <button className="send" type="submit" onClick={createSuggest}>
                 {disabled ? "در حال ارسال..." : "ارسال"}
               </button>
@@ -184,6 +186,12 @@ export default function Suggest() {
                 <Opinion suggest={suggest} />
               ));
             }, [paginatedSuggests])}
+=======
+              <button className="send" type="submit">
+                ارسال
+              </button>
+            </form>
+>>>>>>> parent of 3051ce3 (add opinion section with logic and backend)
           </Rotate>
           <nav className="d-flex justify-content-center">
             <ul className="pagination">
