@@ -1,0 +1,91 @@
+.opinion {
+  width: 100%;
+  /* height: 200px; */
+  box-shadow: 10px 15px 10px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  margin: 10px 0;
+  padding: 10px;
+}
+.header-opinion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(192, 192, 192);
+}
+.first-last-name-opinion {
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.first-last-name-opinion h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.profile-opinion img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.message-opinion {
+  margin: 20px 0;
+  font-size: 18px;
+}
+.footer-opinion {
+  text-align: left;
+}
+.btn-opinion,
+.send-btn-opinion {
+  border: none;
+  outline: none;
+  padding: 5px;
+  border-radius: 5px;
+  width: 60px;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.btn-opinion {
+  background-color: green;
+}
+
+.btn-opinion:disabled {
+  opacity: 0.4;
+}
+
+.send-btn-opinion {
+  background-color: red;
+}
+
+.btn-opinion:hover,
+.send-btn-opinion:hover {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.6);
+  transform: scale(1.09);
+}
+
+.answer-opinion-input {
+  width: 100%;
+  margin-top: 10px;
+  border: 2px solid green;
+  outline: none;
+  border-radius: 5px;
+  color: red;
+}
+
+.answer-opinion-message {
+  font-size: 18px;
+  color: green;
+}
+
+.answer-opinion-message span {
+  font-size: 20px;
+  font-weight: 600;
+  background-color: green;
+  color: #fff;
+  border-radius: 5px;
+  padding: 0 5px;
+  margin-left: 5px;
+}
