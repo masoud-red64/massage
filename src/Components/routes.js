@@ -7,12 +7,16 @@ import ServicesBox from "./ServicesBox/ServicesBox";
 import Suggest from "./Suggest/Suggest";
 import Footer from "./Footer/Footer";
 
+const topScroll = () => {
+  window.scrollTo(0, 0);
+};
+
 const routse = [
   {
     path: "/",
     element: [
-      <Navbar />,
-      <Header />,
+      <Navbar onScroll={topScroll} />,
+      <Header onScroll={topScroll} />,
       <Services />,
       <Aboutus />,
       <ServicesBox />,
@@ -21,6 +25,8 @@ const routse = [
     ],
   },
   { path: "/contactus", element: [<Navbar />, <ContactUs />] },
+
+  { path: "/services", element: [<Navbar />, <Services />, <ServicesBox />] },
 ];
 
 export default routse;

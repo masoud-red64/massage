@@ -4,7 +4,7 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import { Fade, Flip } from "react-reveal";
 import { Link } from "react-router-dom";
 
-export default function Header() {
+export default function Header({ onScroll }) {
   return (
     <div className="header">
       <div>
@@ -19,7 +19,10 @@ export default function Header() {
         <div className="header-btn">
           <Flip right>
             <button className="header-service-btn">
-              <Link to="/services"> خدمات ما</Link>
+              <Link to="/services" onClick={onScroll}>
+                {" "}
+                خدمات ما
+              </Link>
 
               <MdKeyboardArrowRight className="service-arrow-icon" />
             </button>

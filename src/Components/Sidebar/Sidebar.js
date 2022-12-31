@@ -2,7 +2,7 @@ import React from "react";
 import "./Sidebar.css";
 import { NavLink } from "react-router-dom";
 
-export default function Sidebar({ setIsShowSidebar }) {
+export default function Sidebar({ setIsShowSidebar, onScroll }) {
   return (
     <div className="side-bar">
       <div className="sidebar-wrapper">
@@ -12,7 +12,7 @@ export default function Sidebar({ setIsShowSidebar }) {
               صفحه نخست
             </a>
           </NavLink>
-          <NavLink to="/services" className="item">
+          <NavLink to="/services" className="item" onClick={onScroll}>
             <a href="" className="link">
               خدمات ما
             </a>
@@ -37,7 +37,7 @@ export default function Sidebar({ setIsShowSidebar }) {
               درباره اسپارس
             </a>
           </NavLink>
-          <NavLink to="/contactus" className="item">
+          <NavLink to="/contactus" className="item" onClick={onScroll}>
             <a href="" className="link" onClick={() => setIsShowSidebar(false)}>
               تماس با ما
             </a>

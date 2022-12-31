@@ -5,8 +5,9 @@ import { IoMdClose } from "react-icons/io";
 import Sidebar from "../Sidebar/Sidebar";
 import { NavLink } from "react-router-dom";
 
-export default function Navbar() {
+export default function Navbar({ onScroll }) {
   const [isShowSidebar, setIsShowSidebar] = useState(false);
+
   return (
     <>
       <div className="nav-bar">
@@ -33,7 +34,11 @@ export default function Navbar() {
               صفحه نخست
             </NavLink>
 
-            <NavLink to="/services" className="nav-item nav-link">
+            <NavLink
+              to="/services"
+              className="nav-item nav-link"
+              onClick={onScroll}
+            >
               خدمات ما
             </NavLink>
             <NavLink to="/teach" className="nav-item nav-link">
@@ -48,8 +53,12 @@ export default function Navbar() {
             <NavLink to="/about" className="nav-item nav-link">
               درباره اپارس
             </NavLink>
-            <NavLink to="/contactus" className="nav-item nav-link">
-              تماس ما
+            <NavLink
+              to="/contactus"
+              className="nav-item nav-link"
+              onClick={onScroll}
+            >
+              تماس با ما
             </NavLink>
           </ul>
         </div>
@@ -58,7 +67,9 @@ export default function Navbar() {
           <span> منسیکس </span>
         </p>
       </div>
-      {isShowSidebar && <Sidebar setIsShowSidebar={setIsShowSidebar} />}
+      {isShowSidebar && (
+        <Sidebar setIsShowSidebar={setIsShowSidebar} onScroll={onScroll} />
+      )}
     </>
   );
 }
