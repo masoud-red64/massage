@@ -21,27 +21,55 @@
 
 .contact-right h1 {
   font-size: 40px;
-  margin-bottom: 10px;
+  margin: 10px 0;
+  background: linear-gradient(
+    to right bottom,
+    rgb(193, 88, 217),
+    rgb(42, 211, 141)
+  );
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.4);
 }
 .contact-right h2 {
   font-size: 30px;
   margin-bottom: 10px;
+  background: #000;
+  color: #fff;
+  border-radius: 3px;
 }
 .contact-right h3 {
   font-size: 25px;
   margin-bottom: 10px;
+  font-weight: 600;
 }
 .contact-right h4 {
-  font-size: 20px;
-  margin-bottom: 10px;
+  font-size: 30px;
+  margin-bottom: 15px;
+  background: linear-gradient(
+    to left top,
+    rgb(195, 129, 129),
+    rgb(105, 177, 121) 60%,
+    rgba(255, 255, 255, 0.6)
+  );
+  border-radius: 10px;
+  padding: 5px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.4);
 }
+
+.contact-right h4 a {
+  text-decoration: none;
+  color: #000;
+}
+
 .contact-right h5 {
-  font-size: 15px;
+  font-size: 20px;
   margin-bottom: 20px;
 }
 
 .contact-right .social-media {
   width: 100%;
+  margin-bottom: 10px;
 }
 
 .social-media ul {

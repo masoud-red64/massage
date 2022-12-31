@@ -10,10 +10,12 @@ export default function ContactUs() {
     <Container>
       <div className="contact-us">
         <div className="contact-right">
-          <h1 className="name">حسین حسینی</h1>
-          <h2 className="age">23</h2>
-          <h3 className="experience">5 سال</h3>
-          <h4 className="phone-number"><a href="tel:+989154321234">09154321234</a></h4>
+          <h1 className="name">ابوالفضل خبازی</h1>
+          <h2 className="age"> 23 ساله</h2>
+          <h3 className="experience">3 سال</h3>
+          <h4 className="phone-number">
+            <a href="tel:+989154321234">09154321234</a>
+          </h4>
           <h5 className="address">یزد، میبد، خیابان کارگران</h5>
           <div className="social-media">
             <ul>
