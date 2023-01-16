@@ -6,6 +6,7 @@ import Aboutus from "./Aboutus/Aboutus";
 import ServicesBox from "./ServicesBox/ServicesBox";
 import Suggest from "./Suggest/Suggest";
 import Footer from "./Footer/Footer";
+import TurnRating from "./TurnRating/TurnRating";
 
 const topScroll = () => {
   window.scrollTo(0, 0);
@@ -27,6 +28,7 @@ const routse = [
   { path: "/contactus", element: [<Navbar />, <ContactUs />] },
 
   { path: "/services", element: [<Navbar />, <Services />, <ServicesBox />] },
+  { path: "/turn", element: [<Navbar />, <TurnRating />] },
 ];
 
 export default routse;

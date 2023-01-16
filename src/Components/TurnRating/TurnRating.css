@@ -1,0 +1,45 @@
+.turn-rating {
+  width: 60%;
+  margin: 50px auto;
+  box-shadow: 10px 15px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.turn-rating .welcome-to-turn {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 18px;
+}
+.turn-rating input:focus::placeholder {
+  color: #000;
+}
+
+.pickDate-text {
+  text-align: right !important;
+  padding-right: 5px;
+  color: rgb(8, 208, 101);
+}
+
+.error {
+  width: 100%;
+  color: red;
+  text-align: right;
+}
+.error::before {
+  content: "🚨";
+  font-size: 10px;
+  margin-left: 2px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+/* input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    margin: 0;
+} */
+
+/* Firefox */
+/* input[type=number] {
+    -webkit-appearance: none;
+  -moz-appearance: textfield;
+} */

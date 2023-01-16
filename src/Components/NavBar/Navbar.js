@@ -44,8 +44,8 @@ export default function Navbar({ onScroll }) {
             <NavLink to="/teach" className="nav-item nav-link">
               آموزش
             </NavLink>
-            <NavLink to="/news" className="nav-item nav-link">
-              اخبار
+            <NavLink to="/turn" className="nav-item nav-link">
+              نوبت دهی
             </NavLink>
             <NavLink to="/gallery" className="nav-item nav-link">
               گالری

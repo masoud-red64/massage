@@ -22,9 +22,9 @@ export default function Sidebar({ setIsShowSidebar, onScroll }) {
               آموزش
             </a>
           </NavLink>
-          <NavLink to="/news" className="item">
+          <NavLink to="/turn" className="item">
             <a href="" className="link">
-              اخبار
+              نوبت دهی
             </a>
           </NavLink>
           <NavLink to="/gallery" className="item">
