@@ -13,27 +13,27 @@ export default function Sidebar({ setIsShowSidebar, onScroll }) {
             </a>
           </NavLink>
           <NavLink to="/services" className="item" onClick={onScroll}>
-            <a href="" className="link">
+            <a href="" className="link" onClick={() => setIsShowSidebar(false)}>
               خدمات ما
             </a>
           </NavLink>
           <NavLink to="/teach" className="item">
-            <a href="" className="link">
+            <a href="" className="link" onClick={() => setIsShowSidebar(false)}>
               آموزش
             </a>
           </NavLink>
           <NavLink to="/turn" className="item">
-            <a href="" className="link">
+            <a href="" className="link" onClick={() => setIsShowSidebar(false)}>
               نوبت دهی
             </a>
           </NavLink>
           <NavLink to="/gallery" className="item">
-            <a href="" className="link">
+            <a href="" className="link" onClick={() => setIsShowSidebar(false)}>
               گالری
             </a>
           </NavLink>
           <NavLink to="/about" className="item">
-            <a href="" className="link">
+            <a href="" className="link" onClick={() => setIsShowSidebar(false)}>
               درباره اسپارس
             </a>
           </NavLink>
