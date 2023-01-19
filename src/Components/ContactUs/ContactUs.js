@@ -12,7 +12,7 @@ export default function ContactUs() {
         <div className="contact-right">
           <h1 className="name">ابوالفضل خبازی</h1>
           <h2 className="age"> 23 ساله</h2>
-          <h3 className="experience">3 سال</h3>
+          <h3 className="experience">سابقه کار: 3سال</h3>
           <h4 className="phone-number">
             <a href="tel:+989154321234">09154321234</a>
           </h4>
