@@ -40,7 +40,7 @@ export default function ContactUs() {
           </div>
         </div>
         <div className="contact-left">
-          <img src="./images/concat.jpg" alt="" />
+          <img src="./images/concat.webp" alt="" />
         </div>
       </div>
     </Container>
