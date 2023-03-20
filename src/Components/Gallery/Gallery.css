@@ -1,6 +1,55 @@
+.loading {
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: #fff;
+  font-size: 30px;
+  height: 45rem;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.loading span {
+  display: inline-block;
+  margin-right: 5px;
+  font-size: 25px;
+  color: rgb(255, 255, 255);
+  animation: loading-dots 1s infinite;
+}
+
+.loading span:nth-of-type(2) {
+  animation-delay: 0.2s;
+}
+
+.loading span:nth-of-type(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes loading-dots {
+  0% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+
+  20% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+
+  50% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+}
+
 .gallery {
   display: grid;
-  width: 100vw;
+  width: 90vw;
   gap: 10px;
   grid-template-areas:
     "a a a b b b c"
@@ -15,6 +64,10 @@
 .gallery div {
   border-radius: 10px;
   overflow: hidden;
+}
+
+.gallery img {
+  object-fit: cover;
 }
 
 .img-1 {
