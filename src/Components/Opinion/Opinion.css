@@ -4,7 +4,7 @@
   box-shadow: 10px 15px 10px rgba(0, 0, 0, 0.6);
   border-radius: 10px;
   margin: 10px 0;
-  padding: 10px;
+  padding: 18px;
 }
 .header-opinion {
   display: flex;
@@ -78,6 +78,9 @@
 .answer-opinion-message {
   font-size: 18px;
   color: green;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 2px dashed #c7c7c7a1;
 }
 
 .answer-opinion-message span {

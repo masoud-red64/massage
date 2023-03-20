@@ -84,7 +84,7 @@ export default function Suggest() {
         console.log(data);
       }
     } catch (error) {
-      alert(error);
+      // alert(error);
     }
   }
 
