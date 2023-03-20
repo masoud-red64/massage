@@ -12,7 +12,7 @@
 }
 
 .sub-footer {
-  width: 80%;
+  width: 100%;
 }
 .footer-about-us {
   margin-top: 20px;
@@ -20,7 +20,10 @@
 .footer-helpful-link {
   margin-top: 20px;
 }
-
+.footer-helpful-link .link-list{
+  display: flex;
+  flex-wrap: wrap;
+}
 .footer-helpful-link .link-list .link-item {
   margin: 10px;
 }
